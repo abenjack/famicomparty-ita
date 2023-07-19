@@ -49,7 +49,7 @@ altre notizie relative a Famicom Party.
   onsubmit="window.open('https://buttondown.email/famicomparty', 'popupwindow')"
   class="embeddable-buttondown-form"
 >
-  <label for="bd-email">Enter your email</label>
+  <label for="bd-email">Inserisci la tua mail</label>
   <input type="email" name="email" id="bd-email" />
   <input type="hidden" value="1" name="embed" />
   <input type="submit" value="Subscribe" />
