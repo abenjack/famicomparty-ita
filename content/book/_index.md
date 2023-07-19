@@ -6,27 +6,27 @@ page_template = "book-page.html"
 +++
 
 # Famicom Party
-<p class="subtitle">Making NES Games in Assembly</p>
+<p class="subtitle">Creare giochi per NES in Assembly</p>
 
-## Table of Contents
+## Sommario
 
-### Part I: The Setup
+### Parte I: Configurazione
 
-- [Introduction](@/book/00-introduction/index.md)
-- [1. A Brief History of the NES](@/book/01-briefhistory/index.md)
-- [2. Fundamental Concepts](@/book/02-fundamentalconcepts/index.md)
-- [3. Getting Started](@/book/03-gettingstarted/index.md)
+- [Introduzione](@/book/00-introduction/index.md)
+- [1. Breve storia del NES](@/book/01-briefhistory/index.md)
+- [2. Concetti fondamentali](@/book/02-fundamentalconcepts/index.md)
+- [3. Si comincia](@/book/03-gettingstarted/index.md)
 - [4. NES Hardware](@/book/04-hardwareoverview/index.md)
-- [5. Introducing 6502 Assembly](@/book/05-6502assembly/index.md)
-- [6. Headers and Interrupt Vectors](@/book/06-headersinterruptvectors/index.md)
-- [7. Why Would Anyone Do This?](@/book/07-whydothis/index.md)
+- [5. Introduzione all'assembly del 6502](@/book/05-6502assembly/index.md)
+- [6. Headers e Interrupt Vectors](@/book/06-headersinterruptvectors/index.md)
+- [7. Perché qualcuno dovrebbe farlo?](@/book/07-whydothis/index.md)
 - [8. Refactoring](@/book/08-refactoring/index.md)
 
-### Part II: Graphics
+### Parte II: Grafica
 
-- [9. The PPU](@/book/09-theppu/index.md)
+- [9. La PPU](@/book/09-theppu/index.md)
 - [10. Sprite Graphics](@/book/10-spritegraphics/index.md)
-- [11. More Assembly: Branching and Loops](@/book/11-branchingandloops/index.md)
+- [11. Di più sull'Assembly: Branching e Loops](@/book/11-branchingandloops/index.md)
 - [12. Practical Loops](@/book/12-practicalloops/index.md)
 - [13. Background Graphics](@/book/13-backgroundgraphics/index.md)
 - [14. Sprite Movement](@/book/14-spritemovement/index.md)
