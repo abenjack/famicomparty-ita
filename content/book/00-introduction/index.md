@@ -1,9 +1,9 @@
 +++
-title = "Introduction"
+title = "Introduzione"
 weight = 1
 +++
 
-Sometime in the fall of 1990, my parents gave me a Nintendo Entertainment
+Nell'autunno del 1990, i miei genitori mi regalarono un Nintendo Entertainment
 System Action Set: a grey, boxy Control Deck, two controllers, a bright orange
 "Zapper" light gun, and a cartridge that contained both _Super Mario
 Bros._ and _Duck Hunt_. {% sidenote(id="nes-console-set",
