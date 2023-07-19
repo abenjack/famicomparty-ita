@@ -4,9 +4,9 @@ weight = 1
 +++
 
 Nell'autunno del 1990, i miei genitori mi regalarono un Nintendo Entertainment
-System Action Set: a grey, boxy Control Deck, two controllers, a bright orange
-"Zapper" light gun, and a cartridge that contained both _Super Mario
-Bros._ and _Duck Hunt_. {% sidenote(id="nes-console-set",
+System Action Set: un Control Deck squadrato e grigio, due controller, una light gun arancio accesso denominata "Zapper"
+e una cartuccia che conteneva sia _Super Mario
+Bros._ che _Duck Hunt_. {% sidenote(id="nes-console-set",
 img=["NES-Console-Set.jpg", ""]) %}
 An NES console with one controller.\
 Photo by [Evan Amos](https://commons.wikimedia.org/wiki/User:Evan-Amos).
