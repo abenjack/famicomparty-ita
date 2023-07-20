@@ -35,15 +35,14 @@ _Dragon Warrior_ mi ha iniziato ai giochi di ruolo cosi come
 C'erano molti altri giochi con i quali ho trascorso molto tempo: _Ducktales_, _Final Fantasy_,
 _Contra_, e _Mega Man III_ erano alcuni dei miei preferiti.
 
-The NES ultimately set me on a career path. As a kid, I knew that video
-games were special, and that making video games was what I wanted to do as an
-adult. I had the (mistaken) belief that a career making video games meant a
-career **playing** video games. I started learning C++ once my
-family got a computer because that was what “real” programmers used. (Little
-did I know that NES programmers don't use C++, but in my defense I was young
-and naive.) I never made any actual games, though. Game programming always
-seemed more complicated than I was prepared for, and besides, there was no
-shortage of great games from other people waiting to be played.
+Alla fine il NES mi ha indirizzato verso una professione. Da bambino sapevo 
+che i videogiochi erano qualcosa di speciale e che fare videogiochi era ciò che avrei
+voluto fare da grande. Avevo la (errata) convinzione che che una carriera come sviluppatore di videogiochi
+equivalesse alla carriera di **giocare** ai videogiochi. Dopo che la mia famiglia ebbe un computer ho iniziato
+ad imparare il linguaggio C++, poiché era ciò che utilizzavano i programmatori "reali". (Non sapevo che i programmatori NES 
+non usassero il C++, ma in mia difesa ero giovane e ingenuo).
+Ad ogni modo, non ho mai realizzato alcun gioco. Lo sviluppo di videogiochi mi è sempre sembrato
+più complicato di quanto mi aspettassi, e in aggiunta, non mancavano altri giochi di altre persone in attesa di essere giocati.
 
 That dream stuck with me, and after years of being a professional web
 developer I started learning NES development. (I got a strong nudge in the
