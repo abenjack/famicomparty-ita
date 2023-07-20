@@ -8,34 +8,32 @@ System Action Set: un Control Deck squadrato e grigio, due controller, una light
 e una cartuccia che conteneva sia _Super Mario
 Bros._ che _Duck Hunt_. {% sidenote(id="nes-console-set",
 img=["NES-Console-Set.jpg", ""]) %}
-An NES console with one controller.\
-Photo by [Evan Amos](https://commons.wikimedia.org/wiki/User:Evan-Amos).
+Una console NES con il controller.\
+Foto di [Evan Amos](https://commons.wikimedia.org/wiki/User:Evan-Amos).
 {% end %}
-The Control Deck plugged into the big CRT TV
-we had in the basement via an RF switch, basically an antenna that fed video
-from the Control Deck to the TV when you tuned it to Channel 3. It was the
-first video game console we had ever owned, and I loved it.
+La console era collegata al grande televisore a tubo catodico
+che avevamo al seminterrato tramite uno switch RF, fondamentalmente un'antenna 
+che portava il segnale video dalla console alla TV quando veniva sintonizzata sul Canale 3.
+Era la prima console di gioco che avevamo mai avuto, e io la adoravo.
 
-I spent a lot of time in the basement that year. At first, my dad did too -
-he was working his way through _Super Mario Bros._, learning where the
-secret Warp Zones were located and how to get past the menacing Hammer Bros.
-Eventually he defeated Bowser (or “the dragon”, as he called him), saved the
-princess, and never really played an NES game ever again.
+Ho trascorso molto tempo nel seminterrato quell'anno. All'inizio lo fece anche mio padre -
+si stava facendo strada con _Super Mario Bros._, imparando dove si trovavano i passaggi segreti
+e come superare i minacciosi Hammer Bros.
+Alla fine sconfisse Bowser (o “il drago”, come lo chiamava lui), salvò la
+principessa, e non ha più giocato a un gioco per NES.
 
-I was hooked, though. We got a promotional letter in the mail
-offering a free copy of _Dragon Warrior_
-for subscribing to Nintendo Power magazine; signing
-up for a $20 magazine subscription to get a $50 game was a
-no-brainer.{% sidenote(id="dragon-warrior-box",
+Io in compenso ero preso. Abbiamo ricevuto una lettera promozionale tramite posta
+dove ci informavano che avrebbero offerto una copia gratuita di _Dragon Warrior_
+abbonandoci alla rivista Nintendo Power; sottoscrivere
+un abbonamento ad una rivista per $20 dollari per ottenere un gioco che ne valeva $50
+era una follia. {% sidenote(id="dragon-warrior-box",
 img=["Dragon_Warrior-box.jpg", "Dragon Warrior box"]) %}
-Dragon Warrior (US box art).
+Dragon Warrior (box art statunitense).
 {% end %}
-_Dragon Warrior_ introduced me to RPGs in the
-same way that _Super Mario Bros._ had introduced me to
-platformers. There were plenty of other games that I spent time
-with, too: _Ducktales_, _Final Fantasy_,
-_Contra_, and _Mega Man III_ were some of my
-favorites.
+_Dragon Warrior_ mi ha iniziato ai giochi di ruolo cosi come
+ _Super Mario Bros._ ha fatto con i platformer. 
+C'erano molti altri giochi con i quali ho trascorso molto tempo: _Ducktales_, _Final Fantasy_,
+_Contra_, e _Mega Man III_ erano alcuni dei miei preferiti.
 
 The NES ultimately set me on a career path. As a kid, I knew that video
 games were special, and that making video games was what I wanted to do as an
