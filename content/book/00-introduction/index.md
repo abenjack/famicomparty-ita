@@ -44,21 +44,20 @@ non usassero il C++, ma in mia difesa ero giovane e ingenuo).
 Ad ogni modo, non ho mai realizzato alcun gioco. Lo sviluppo di videogiochi mi è sempre sembrato
 più complicato di quanto mi aspettassi, e in aggiunta, non mancavano altri giochi di altre persone in attesa di essere giocati.
 
-That dream stuck with me, and after years of being a professional web
-developer I started learning NES development. (I got a strong nudge in the
-right direction from Nathan Altice’s excellent _I Am Error_.){% sidenote(id="i-am-error",
-img=["i-am-error.jpg", "I Am Error, front cover"]) %}
+Quel sogno me lo sono portato dentro, e dopo molti anni trascorsi da sviluppatore web professionista,
+ho iniziato ad imparare lo sviluppo su NES. (Ho avuto una forte spinta nella giusta direzione 
+dall'eccellente libro _I Am Error_ di Nathan Altice). {% sidenote(id="i-am-error",
+img=["i-am-error.jpg", "I Am Error, copertina frontale"]) %}
 [_I Am Error_](https://mitpress.mit.edu/books/i-am-error).
 {% end %}
-It was hard to know where to begin. There were plenty of resources around the
-internet, but they were all incomplete or inaccurate in some way. I got started
-with bunnyboy's ["Nerdy Nights"](https://nerdy-nights.nes.science) series on the NintendoAge forums. Then I found
-tepples' [NROM template](https://github.com/pinobatch/nrom-template)
-on GitHub, and started learning the ca65 assembler.
-After months of struggling to understand PPU writes, attribute tables, and
-scroll registers, it all started to click. I'm glad that I had the experience
-of fighting with these concepts to learn on my own, but I wish that I could
-have had a guide that started from scratch and taught all of the essentials of
-NES development.
+E' stato difficile capire da dove iniziare. C'era un'enorme mole di risorse in rete,
+ma erano tutte incomplete o in qualche modo poco precise. Ho iniziato con la serie di bunnyboy sul 
+forum di NintendoAge ["Nerdy Nights"](https://nerdy-nights.nes.science). Poi ho trovato il progetto di tepples
+[NROM template](https://github.com/pinobatch/nrom-template) su GitHub, ed ho iniziato a studiare l'assembler C65.
+Dopo mesi di difficoltà per capire come funziona la PPU, le attribute tables e gli scroll registers, 
+tutto cominciò ad avere un senso. Sono contento di avere avuto l'esperienza 
+per padroneggiare questi concetti in autonomia, ma avrei voluto avere una guida che 
+partisse da zero e insegnasse tutti gli elementi essenziali dello sviluppo su NES.
 
-My hope is that the book you are now reading will serve as that guide.
+Ls mia speranza è che questo libro che stai leggendo in questo momento potrà servirti come guida.
+
