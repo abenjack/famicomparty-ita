@@ -59,5 +59,5 @@ tutto cominciò ad avere un senso. Sono contento di avere avuto l'esperienza
 per padroneggiare questi concetti in autonomia, ma avrei voluto avere una guida che 
 partisse da zero e insegnasse tutti gli elementi essenziali dello sviluppo su NES.
 
-Ls mia speranza è che questo libro che stai leggendo in questo momento potrà servirti come guida.
+La mia speranza è che questo libro che stai leggendo in questo momento potrà servirti come guida.
 
