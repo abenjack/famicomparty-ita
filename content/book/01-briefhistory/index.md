@@ -1,18 +1,17 @@
 +++
-title = "1. A Brief Introduction to the NES"
+title = "1. Una breve introduzione sul NES"
 weight = 10
 +++
 
-In broad terms, the NES (“Nintendo Entertainment System”) is a home
-video game console designed to connect to a CRT television. It uses
-interchangeable, read-only cartridges (“Game Paks”) to store games,
-since the system has no permanent means of storage. Input comes in
-the form of two controller ports on the front of the system; the
-standard NES controller has a 4-way, cross-shaped directional pad
-and four additional buttons, labelled Start, Select, A, and B.{% sidenote(id="nes-console-set",
+In generale, il NES (“Nintendo Entertainment System”) è una console casalinga
+progettata per essere collegata ad una RV CRT. Utilizza delle cartucce intercambiali, in sola lettura ("Game Paks")
+per archiviare giochi, poiché il sistema non ha strumenti di archiviazione permanenti.
+L'input gli arriva da due porte controller situate nella parte frontale della console; il
+controller standard del NES ha un pad direzionale a forma di croce a 4 vie e quattro pulsanti aggiuntivi,
+denominati Start, Select, A e B. {% sidenote(id="nes-console-set",
 img=["NES-Console-Set.jpg", ""]) %}
-An NES console with one controller.\
-Photo by [Evan Amos](https://commons.wikimedia.org/wiki/User:Evan-Amos).
+Una console NES con il controller.\
+Foto di [Evan Amos](https://commons.wikimedia.org/wiki/User:Evan-Amos).
 {% end %}
 
 The NES was first released in the U.S. in 1985; no one is sure
