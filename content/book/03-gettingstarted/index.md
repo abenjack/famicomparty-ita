@@ -18,8 +18,8 @@ free to experiment with other tools once you get comfortable with my recommendat
 
 - A text editor (your choice)
 - An assembler/linker (ca65 and ld65)
-- An emulator (Nintaco)
-- A graphics tool that can read/save NES formatted images (NES Lightbox)
+- An emulator (Mesen2)
+- A graphics tool that can read/save NES formatted images (NEXXT)
 - A music composition tool (FamiStudio)
 
 ## Text Editor
@@ -90,44 +90,64 @@ An _emulator_ is a program that runs programs intended for a different computer 
 We will use an NES emulator to run the programs that we create on the same computer used to
 develop them, instead of requiring a hardware NES. There are a number of NES emulators available
 (and, once you have a solid grasp of NES development, it's fun to try to make your own!), but
-for this book we will be using [Nintaco](http://nintaco.com/).{% sidenote(id="nintaco",
-img=["nintaco.png", ""]) %}
-Nintaco.
-{% end %} It is cross-platform and one of the few emulators to feature debugging tools, which will be
+for this book we will be using [Mesen2](https://github.com/SourMesen/Mesen2).{% sidenote(id="mesen2",
+img=["mesen2.png", ""]) %}
+Mesen2.
+{% end %} It is cross-platform and features powerful debugging tools, which will be
 useful as we write programs.
 
-Installing Nintaco is the same for all platforms - download it from the Nintaco website and unzip.
-To run Nintaco, double-click Nintaco.jar. Nintaco requires Java to run; if you do not have Java
-installed on your computer, download a "Java Runtime Environment" from [java.com](https://java.com).
+### Windows / Linux / Intel-based Mac
+
+For these systems, download the latest [development release](https://nightly.link/SourMesen/Mesen2/workflows/build/master),
+then unzip. You will need to install [.NET Runtime v6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) on all
+systems. Non-Windows systems will also need to install SDL2 through your OS' package manager or Homebrew on Mac.
+
+### ARM-based Mac (M1, M2, etc.)
+
+On these systems, you will need to build Mesen2 from source. First, install SDL2 via Homebrew
+(`brew install sdl2`), then install the [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
+Download Mesen2's source code and run `make`:
+
+```
+git clone https://github.com/SourMesen/Mesen2.git
+cd Mesen2
+make
+```
+
+When the build process is complete, you will have `Mesen.app` in the `bin/osx-arm64/Release/osx-arm64/publish`
+directory inside of the `Mesen2` directory where you ran `make`. Move `Mesen.app` into your Applications
+folder.
 
 ## Graphics Tools
 
 The NES stores graphics in a very different format from common image types like JPEG or PNG. We
 will need a program that can work with NES images. There are plugins for large graphics
-packages like Photoshop or GIMP, but I like using a smaller, purpose-built tool for this.
-For this book, we will be using [NES Lightbox](https://famicom.party/neslightbox),{%
-sidenote(id="nes-lightbox", img=["neslightbox.png", ""]) %}
-NES Lightbox.
-{% end %} a cross-platform derivative of [NES Screen Tool](https://shiru.untergrund.net/software.shtml).
+packages like Photoshop or GIMP, but a smaller, purpose-built tool is often a better choice.
+For this book, we will be using [NEXXT](https://frankengraphics.itch.io/nexxt),{%
+sidenote(id="nexxt", img=["nexxt.png", ""]) %}
+NEXXT.
+{% end %} a derivative of [NES Screen Tool](https://shiru.untergrund.net/software.shtml).
+NEXXT is a Windows-only program, but runs well on other platforms under WINE.
 
 ### Windows
 
-Download the [Windows installer](https://famicom.party/neslightbox/releases/1.0.0/NES%20Lightbox%20Setup%201.0.0.exe)
-(for 64-bit systems). Double-click "NES Lightbox Setup 1.0.0.exe" to install it.
-
-### Mac
-
-Download the [Mac DMG](https://famicom.party/neslightbox/releases/1.0.0/NES%20Lightbox-1.0.0.dmg).
-Double-click the .dmg file to open it and drag the NES Lightbox app to your Applications folder. You will
-need to right-click the application and choose "Open" the first time you try to
-run the program, since it is not "notarized" by Apple.
+Download NEXXT from [itch.io](https://frankengraphics.itch.io/nexxt/purchase). Unzip, and run
+NEXXT.exe.
 
 ### Linux
 
-On Ubuntu systems, you can download the [Snap file](https://famicom.party/neslightbox/releases/1.0.0/neslightbox_1.0.0_amd64.snap),
-which is a self-contained application package. For other Linux distributions (or if you prefer AppImage), download the
-[AppImage file](https://famicom.party/neslightbox/releases/1.0.0/NES%20Lightbox-1.0.0.AppImage). You will
-need to mark the AppImage file as executable before running it.
+Since NEXXT is a 32-bit, Windows-only program, Linux users will have to run it via [WINE](https://www.winehq.org).
+Install WINE via your distribution's package manager, then run NEXXT.exe with it (`wine NEXXT.exe`).
+
+### Mac
+
+Newer Mac versions (starting with Catalina) are 64-bit only, and 32-bit software will not run
+even in a standard WINE install. Thankfully, 32-bit Windows programs can be run using the
+"Crossover" version of WINE, which is able to translate 32-bit code into 64-bit code
+on the fly. Install Crossover via Homebrew (`brew install wine-crossover --no-quarantine`).
+Download NEXXT as above and unzip, then run `wine64 ./NEXXT.exe` in the directory where
+you unzipped it.
+
 
 ## Music Composition Tools
 
@@ -206,7 +226,7 @@ ready to plug into an emulator just yet. To do that, we need to run the linker.
 In the same directory, run `ld65 helloworld.o -t nes -o helloworld.nes`.
 This should result in a new file, helloworld.nes - a "ROM" file for the emulator.
 
-Open Nintaco and choose "Open" from the "File" menu. Select the helloworld.nes file
+Open Mesen2 and choose "Open" from the "File" menu. Select the helloworld.nes file
 you just created and click Open. The result should be a green screen.{% sidenote(id="explain-nes-examples") %}
 The green screen here is an actual, running NES emulator in your browser! I am using
 the amazing [jsnes](https://github.com/bfirsh/jsnes) by [Ben Firshman](https://fir.sh/).
@@ -218,7 +238,7 @@ to tell in this case, but the emulator is actually running at 60fps.)
 
 ## Next Steps
 
-If you were able to see the green screen in Nintaco, congratulations! Your development
+If you were able to see the green screen in Mesen2, congratulations! Your development
 environment is ready to use. In the next chapter, we will discuss what the code you
 copied and pasted is actually doing, and learn a bit about how the NES hardware works.
 

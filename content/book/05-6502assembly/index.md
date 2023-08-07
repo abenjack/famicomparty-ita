@@ -363,7 +363,7 @@ and how our code initializes the NES when it first powers on.
 
 Now that you know how the test project sets a background color, try modifying it
 to display a different color. I've included the color chart from Chapter 4 below.
-Don't forget to re-assemble and re-link your code before opening it in Nintaco.
+Don't forget to re-assemble and re-link your code before opening it in Mesen2.
 
 {% figure(img="NES_color_palette_with_numbers.png") %}
 The NES color palette.

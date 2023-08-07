@@ -45,8 +45,9 @@ TV speakers. I'm not aware of any Famicom games that actually used
 that functionality, and the microphone was dropped when the controllers
 were revised for the NES. Some Famicom games do use the microphone
 as a sort of additional input by having the player scream into it
-at certain points. This functionality has been preserved in Nintaco,
-which has a "Scream into Microphone" action in the "Machine" menu.
+at certain points. This functionality has been preserved in Mesen2,
+which allows you to set a key for microphone input when the Player 2
+controller is set to "Famicom controller".
 {% end %}
 
 {% figure(img="famicomcontroller2.jpg") %}

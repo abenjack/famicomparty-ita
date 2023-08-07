@@ -223,13 +223,13 @@ Here is one of the nametables:
 
 {% figure(img="newbgs.png") %}
 Minor additions to the nametable from last chapter, as seen in
-NES Lightbox.
+NEXXT.
 {% end %}
 
 And here is the other:
 
 {% figure(img="newbgs2.png") %}
-Another set of additions, as seen in NES Lightbox.
+Another set of additions, as seen in NEXXT.
 {% end %}
 
 Both nametables use the same pattern of stars in the background,
@@ -320,7 +320,7 @@ background" code and replace it with two calls to our new subroutine:
   JSR draw_starfield
 ```
 
-The result, if you check the "Nametables" debug helper in Nintaco,
+The result, if you check the "Tilemap Viewer" debug helper in Mesen2,
 is that both nametables will have a starfield background. Next, we'll
 need to add some new objects on top of the starfield. I chose to do this
 in another subroutine inside `backgrounds.asm`, this time called `draw_objects`:
@@ -388,8 +388,8 @@ register (nor any other); the addresses are hard-coded. Calling
 this subroutine (with `JSR draw_objects` following our two
 calls to `draw_starfield`) will complete our two nametables.
 
-{% figure(img="finished-nametables.jpg") %}
-The completed nametables as seen in Nintaco's "Nametables" viewer.
+{% figure(img="finished-nametables.png") %}
+The completed nametables as seen in Mesen2's "Tilemap Viewer".
 Note that the left and right halves are identical - this is because
 we are using horizontal mirroring. If we were to scroll to the
 left or right, we would move into that mirrored area and the screen

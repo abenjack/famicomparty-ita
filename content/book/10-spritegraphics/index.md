@@ -249,37 +249,43 @@ tables, one for sprites and one for backgrounds. We will need to
 create our own pattern tables to display sprites on screen. This
 is where NES Lightbox comes in handy.
 
-## Using NES Lightbox
+## Using NEXXT
 
-Open NES Lightbox. You should see a screen similar to this:
+Open NEXXT. You should see a screen similar to this:
 
-{% figure(img="neslightbox-empty.png") %}
-The main screen of NES Lightbox.
+{% figure(img="nexxt-empty.png") %}
+The main screen of NEXXT.
 {% end %}
 
 Before we dive into creating sprites, let's take a quick tour of how
-NES Lightbox is organized. The large area on the left half
+NEXXT is organized. The large area on the left half
 of the screen is a sort of canvas that can be used to draw
 backgrounds using tiles from a pattern table. We will not use this
 area until we start discussing background graphics. The right
 half of the interface is broadly divided into pattern tables
 ("Tileset") and palettes.
 
-{% figure(img="neslightbox-tileset.png") %}
+{% figure(img="nexxt-tileset.png") %}
 The "Tileset" area.
 {% end %}
 
 Within the "Tileset" area, the main element is a display of a pattern
-table. Just below the pattern table display are toggle switches for
+table. Just below the pattern table display is a toggle switch for
 "Bank A / Bank B". As mentioned before, generally one pattern table
 is used for sprites, and the other is used for backgrounds. The A/B
 switch lets you flip between the two pattern tables.
-There is also a "Grid" button, which will turn on and off a grid
-showing the boundaries of each tile in the pattern table.
-The "Edit" button will open a separate tile editor window once
-you select a tile in the tileset display.
+The "CHR editor" button will open a separate tile editor window,
+to make it easier to set the contents of each tile.
 
-{% figure(img="neslightbox-palettes.png") %}
+{% figure(img="nexxt-view.png") %}
+The "View" panel.
+{% end %}
+
+There is also a "View" panel, which provides the option to turn on
+and off a variety of grids showing the boundaries of each tile in
+the pattern table and in the large area on the left.
+
+{% figure(img="nexxt-palettes.png") %}
 The "Palettes" area.
 {% end %}
 
@@ -304,26 +310,25 @@ some basic sprites and a full font in the background table. Download
 and open it in NES Lightbox ("Tilesets" &rarr; "Open CHR..." &rarr; select graphics.chr).
 
 To edit or create tiles, click on the space in the pattern table
-display for the tile you wish to alter, then click the "Edit" button. This will
+display for the tile you wish to alter, then click the "CHR editor" button. This will
 open a separate tile-editing window.
 
-{% figure(img="neslightbox-editor.png") %}
-NES Lightbox's "Edit Tile" window.
+{% figure(img="nexxt-editor.png") %}
+NEXXT's "CHR Editor" window.
 {% end %}
 
 To edit a tile (or create new tiles!), select a palette index from
-the four colors below the tile, then click pixels
-in the Edit Tile window to set them to that palette index.{% sidenote(id="changing-palettes")
+the Palettes area, then click pixels
+in the CHR Editor window to set them to that palette index.{% sidenote(id="changing-palettes")
 %}
 Note that clicking on different palettes in the main window changes all
 displayed colors to the colors from that palette. This is extremely useful
 for testing out what your tiles will look like in the palettes used
 by your game.
-{% end %} The "Grid" button will turn on a dotted-line grid that makes it easier
-to see where each individual pixel of the tile is. The rotate and flip
-buttons allow you to easily make large-scale edits.
+{% end %} The rotate and flip
+buttons, among others, allow you to easily make large-scale edits.
 Once you have created a set of tiles to work with, save your work by choosing
-"Tileset" &rarr; "Save CHR As...".
+"File" &rarr; "Patterns (.chr)" &rarr; "Save 8K (both tables)...".
 
 ## Displaying Sprites In Your Game
 

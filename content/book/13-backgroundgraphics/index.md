@@ -43,41 +43,40 @@ palettes, we will need to write an attribute table as well.
 First, let's figure out where to put our new tiles in the nametable. We only
 need to write to nametable addresses where we intend to place a tile &mdash;
 everywhere else, the default background color from our palettes will be used.
-In NES Lightbox, click a tile from the right side of the screen, then click
+In NEXXT, click a tile from the right side of the screen, then click
 anywhere in the large area on the left to "draw" with the tile. Here is the
 example background that we will use:
 
 {% figure(img="starbackground.png") %}
-Placing background tiles in NES Lightbox.
+Placing background tiles in NEXXT.
 {% end %}
 
 Once you have an arrangement that you like, you can save what you have so
-far to a `.nam` file. From NES Lightbox's menus, select Nametables &rarr;
-Save Nametable As..., then choose a filename and a location to save the file.
-To reload your background later for editing, open NES Lightbox and select Nametables &rarr;
-Open Nametable..., and select the `.nam` file you saved earlier.
+far to a `.nam` file. From NEXXT's menus, select "File" &rarr;
+"Canvas (.nam or .map)" &rarr; "Save as screen (32x30)", then choose a filename and a location to save the file.
+To reload your background later for editing, open NEXXT and select "File" &rarr;
+"Canvas (.nam or .map)" &rarr; "Open canvas (map or nametable)", and select the `.nam` file you saved earlier.
 
 When you hover over any tile in the large left pane, the status bar at the bottom
-of NES Lightbox shows you useful information for writing nametables and attribute tables.
+of NEXXT shows you useful information for writing nametables and attribute tables.
 As discussed in [Chapter 9](/book/09-theppu/index.md), the NES has four
 nametables, the first of which starts at PPU memory address `$2000`.
-The bottom status bar of NES Lightbox shows the "nametable offset" and "attribute offset"
-for each tile position &mdash; that is, how many bytes beyond the start of the
-nametable or attribute table it is. To make things easier, it also shows the address
-of the tile location in each nametable and attribute table.
+The bottom status bar of NEXXT shows the "nametable offset" ("Off") and "attribute offset"
+("AtOff") for each tile position &mdash; that is, how many bytes beyond the start of the
+nametable or attribute table it is. It also displays the current tile number as "Name".
 
-{% figure(img="neslightbox-statusbar.png") %}
-The bottom status bar of NES Lightbox, displaying nametable and
-attribute table offsets and the corresponding PPU memory locations for
-that offset in each of the four nametables and attribute tables.
+{% figure(img="nexxt-statusbar.png") %}
+The bottom status bar of NEXXT, displaying nametable and
+attribute table offsets.
 {% end %}
 
 We can use this information to fill out our nametable. As you might remember,
 the nametable is just a series of tile numbers; palette selection occurs
 in the attribute table. To create the nametable, we need to write the appropriate
-tile number to each nametable address as displayed in NES Lightbox. Let's start with
+tile number to each nametable address as displayed in NEXXT. Let's start with
 the "large" star tile (tile number `$2f`, as you can see by
-hovering over the tile in the right-side "Tileset" window and looking at the
+hovering over the tile in the right-side "Tileset" window or the tile in
+the canvas view, and looking at the
 status bar at the bottom of the application window). From hovering over
 the places where the large star tile is used, we can see that we need to
 write the value `$2f` to the following addresses in PPU memory:
@@ -86,6 +85,9 @@ write the value `$2f` to the following addresses in PPU memory:
 - `$2157`
 - `$2223`
 - `$2352`
+
+Each of these addresses is the start of the nametable (`$2000`) plus
+the offset ("Off") for each tile in the canvas.
 
 The process is the same as what we have used before for palettes and
 sprites: read from `PPUSTATUS`, write the address you want
@@ -125,25 +127,19 @@ colors for the tiles, we will need to write an attribute table as well.
 Background tile palettes are set via an attribute table, which uses one
 byte to store palette information for a 4x4 square of background tiles.
 To change the palettes used for a particular tile, first hover over that
-tile in the left-side nametable display and note the "Attribute offset"
-for the tile. Next, we need to figure out which 2x2 area of tiles
+tile in the left-side nametable display and note the "AtOff"
+for the tile. Remember that an "AtOff" in NEXXT is an offset
+from the start of the nametable (e.g., `$2000`), not the start
+of an attribute table. Next, we need to figure out which 2x2 area of tiles
 (top left, top right, bottom left, or bottom right) the tile we want
 to change is part of. To help with finding the boundaries of an
-attribute table byte, click "Attribute grid" at the bottom of the
-nametable display. This will overlay a red dashed-line grid
-that shows the boundaries of each 4x4 tile attribute table byte's
-coverage area.
+attribute table byte, "AtOff" will end with one of `.0`, `.2`,
+`.4`, or `.6`, which will tell you the starting bit of the current
+tile's palette in the attribute table byte.
 
 As an example, let's change the palette used to draw the first
 "large star" in the nametable. By hovering over it in the nametable
-viewer, we can find the attribute offset (`$02`), and by
-looking at the attribute grid overlay we can see where within the 4x4
-set of tiles our chosen tile is located (here, the bottom-right 2x2 area).
-
-{% figure(img="findattributeoffset.png") %}
-Finding attribute offset information for the "large star"
-at the top of the nametable.
-{% end %}
+viewer, we can find the attribute offset (`$03C2.6`).
 
 Each byte of the attribute table holds palette information for
 four 2x2 areas of background tiles, using two bits for each area.
@@ -155,9 +151,8 @@ and top-left 2x2 areas.
 Layout of bits in an attribute table byte.
 {% end %}
 
-In this case, we want to change the palette for the bottom-right
-section of an attribute table byte, so we will need to change
-the leftmost two bits of the byte. By default, the attribute table
+In this case, changing bits 6-7 of an attribute table byte will set the palette
+for the bottom-right section. By default, the attribute table
 is all zeroes, meaning every 2x2 area of the background uses the
 first background palette. Let's change our tile to use the second
 palette (`01`) instead of the first palette (`00`).
@@ -182,7 +177,7 @@ second palette. In this case, the background tiles we are setting are relatively
 far apart, but if your backgrounds are more "busy" you will need to think
 carefully about where to change from one background palette to another.
 When you select a palette (by clicking any color within the palette)
-before placing a tile in the nametable display, NES Lightbox will update
+before placing a tile in the nametable display, NEXXT will update
 the underlying attribute table and update all tiles in the affected
 2x2 area to use the new palette, which can help you identify potential
 attribute table clashes.
@@ -258,32 +253,27 @@ Since we now need to write more than just four palette bytes, I've
 changed the loop that writes palettes to use `CPX #$20`
 (16 values) instead of `CPX #$04`.
 
-## Using NES Lightbox Projects
+## Using NEXXT Sessions
 
 Before we move on to this chapter's homework, let's look at the
-"Project" functionality of NES Lightbox. A "project" is a list of
+"Session" functionality of NEXXT. A "session" is a list of
 files that make up a working environment (tileset, palettes, nametable)
-and the currently-selected tileset bank. The project file uses
-full paths to each file, which means that project files are
+and all settings. The session file uses
+absolute paths to each file, which means that session files are
 unfortunately not portable between different computers.
 
-To create a project file, select Project &rarr; Save Project As...
-from NES Lightbox's menus. Choose a name for the project file
-and click "OK". Any files that you had previously opened will
-be saved as part of the project file. Any tileset, palette set,
-or nametable that had not previously been saved will be saved
-with the name of the project. If your project is named "starfield.nesproj",
-a nametable that had not previously been saved would be saved
-as "starfield.nam". Once you have saved (or loaded) a project,
-you can select Project &rarr; Save All Project Files to save
+To create a session file, select "File" &rarr; "Save Session As..."
+from NEXXT's menus. Choose a name and location for the session file
+and click "OK". Once you have saved (or loaded) a project,
+you can select "File" &rarr; "Save Session" to save
 the project's .chr, .nam, and .pal files with the current data
 in the application.
 
-To restore your work environment later, select Project &rarr; Open
-Project... and select the .nesproj file you saved earlier.
+To restore your work environment later, select "File" &rarr; "Open
+Session..." and select the .nss file you saved earlier.
 If any of the project's files have changed location on disk, you
-can edit the .nesproj file with any text editor - it is simply
-a JSON file that contains the path to each file.
+can edit the .nss file with any text editor - it is simply
+a list of keys and values in plain text.
 
 ## Homework
 
